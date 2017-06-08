@@ -1,0 +1,59 @@
+$theme-color: #3d376d;
+$text-common: #fff;
+$light-theme-color: #7986CB;
+
+ul { list-style-type: none; }
+%theme {
+   background: $theme-color;
+   color: $text-common;
+}
+
+.section-margin{
+  margin: 40px auto 20px auto;
+}
+
+.padding-top {
+  padding-top: 80px;
+}
+
+.navbar.navbar-inverse {
+  @extend %theme;
+}
+
+.jumbotron {
+  @extend %theme;
+  background: $light-theme-color;
+  margin: 0 auto;
+}
+
+.carousel  {
+  @extend %theme;
+}
+
+.carousel .item {
+  height: 400px;
+}
+
+.carousel .item img {
+  height: 100%;
+}
+
+.row-common {
+  min-height: 400px;
+  margin: 0 auto;
+  padding: 40px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.footer-section {
+  margin: 0 auto;
+  padding: 20px 0;
+  background-color: #AfAfAf;
+}
+.footer-section address {
+  font-size: 0.95em;
+}
+
+// .contact-section {
+//   font-size: 100%
+// }
