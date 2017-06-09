@@ -31,7 +31,7 @@
               <a href="about.html"> <span class="glyphicon glyphicon-info-sign"></span> About</a>
             </li>
             <li> <a href="../"><span class="glyphicon glyphicon-chevron-down"></span> Menu</a> </li>
-            <li> <a href="../"><span class="glyphicon glyphicon-phone-alt"></span> Contact</a> </li>
+            <li> <a href="contact.html"><span class="glyphicon glyphicon-phone-alt"></span> Contact</a> </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a data-toggle="modal" data-target="#loginModal"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -102,6 +102,14 @@
           <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
           <span class="sr-only">Next</span>
         </a>
+        <div id="carouselButtons">
+          <button id="playButton" type="button" class="btn btn-danger btn-xs">
+              <span class="glyphicon glyphicon-play"></span>
+          </button>
+          <button id="pauseButton" type="button" class="btn btn-danger  btn-xs">
+              <span class="glyphicon glyphicon-pause"></span>
+          </button>
+      </div>
       </div> <!-- carousel -->
     </div>
   </div>
@@ -111,12 +119,12 @@
         <div class="col-sm-9">
           <div class="media">
             <div class="media-left">
-              <a href=""><img src="img/uthappizza.png" alt="Uthappizza"></a>
+              <a href=""><img src="img/uthappizza.png" class="media-object img-thumbnail" alt="Uthappizza"></a>
             </div>
             <div class="media-body">
-              <h3 class="media-heading">Uthappizza <span class="label label-danger label-xs">Hot</span>
+              <h2 class="media-heading">Uthappizza <span class="label label-danger label-xs">Hot</span>
                 <span class="badge">$9.99</span>
-              </h3>
+              </h2>
               <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.
               </p>
               <a href="#" class="btn btn-primary">More<<</a>
@@ -124,25 +132,25 @@
           </div><!-- /media -->
         </div><!-- /col-sm-9 -->
         <div class="col-sm-3">
-          <h4>Our Lipsmacking Culinary Creations</h4>
+          <h3>Our Lipsmacking Culinary Creations</h3>
         </div>
     </div>
     <div class="row row-common">
       <div class="col-sm-3">
-        <h4>Our Lipsmacking Culinary Creations</h4>
+        <h3>This Month's Promotions</h3>
       </div>
       <div class="col-sm-9">
         <div class="media">
             <div class="media-body">
-            <h3 class="media-heading">Uthappizza <span class="label label-danger label-xs">Hot</span>
+            <h2 class="media-heading">Weekend Grand Buffet <span class="label label-danger label-xs">New</span>
               <span class="badge">$9.99</span>
-            </h3>
-          <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.
+            </h2>
+          <p>Featuring mouthwatering combinations with a choice of five different salads, six enticing appetizers, six main entrees and five choicest desserts. Free flowing bubbly and soft drinks. All for just $19.99 per person.
           </p>
           <a href="#" class="btn btn-primary">More<<</a>
         </div><!-- /media-body -->
         <div class="media-right">
-          <a href=""><img src="img/uthappizza.png" alt="Uthappizza"></a>
+          <a href=""><img src="img/buffet.png" class="media-object img-thumbnail" alt="Buffet"></a>
         </div>
       </div><!-- /media -->
       </div><!-- /col-sm-9 -->
@@ -151,12 +159,11 @@
       <div class="col-sm-9">
         <div class="media">
           <div class="media-left">
-            <a href=""><img src="img/uthappizza.png" alt="Uthappizza"></a>
+            <a href=""><img src="img/alberto.png" class="media-object img-thumbnail" alt="Alberto"></a>
           </div>
           <div class="media-body">
-            <h3 class="media-heading">Uthappizza <span class="label label-danger label-xs">Hot</span>
-              <span class="badge">$9.99</span>
-            </h3>
+            <h2 class="media-heading">Executive Chef
+            </h2>
             <p>A unique combination of Indian Uthappam (pancake) and Italian pizza, topped with Cerignola olives, ripe vine cherry tomatoes, Vidalia onion, Guntur chillies and Buffalo Paneer.
             </p>
             <a href="#" class="btn btn-primary">More<<</a>
@@ -164,7 +171,7 @@
         </div><!-- /media -->
       </div><!-- /col-sm-9 -->
       <div class="col-sm-3">
-        <h4>Our Lipsmacking Culinary Creations</h4>
+        <h3>Meet our Culinary Specialists</h3>
       </div>
     </div>
   </div>
@@ -208,7 +215,7 @@
         <li><a href="" class="btn btn-social-icon btn-linkedin"><i class="fa fa-linkedin"></i></a></li></li>
         <li><a href="" class="btn btn-social-icon btn-twitter"><i class="fa fa-twitter"></i></a></li></li>
         <li><a href="" class="btn btn-social-icon btn-youtube"><i class="fa fa-youtube"></i></a></li>
-          <li><a href=""><i class="fa fa-envelope"></i></a></li>
+        <li><a href="" class="btn btn-social-icon btn-envelope"><i class="fa fa-envelope"></i></a></li>
         </ul>
       </div>
       <div class="col-sm-12 text-center">
@@ -306,9 +313,20 @@
     </div><!-- /modal-content-->
   </div><!-- /modal-dialog-->
 </div> <!-- /reserveTableModal-->
-  </body>
 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 <script src="bower_components/jquery/dist/jquery.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+  $(document).ready(function () {
+    $('#carousel').carousel({ interval: 1000 });
+    $('#playButton').click(function () { $('#carousel').carousel('cycle'); });
+    $('#pauseButton').click(function () {
+      $('#carousel').carousel('pause');
+    });
+  });
+</script>
+
+</body>
+
 </html>

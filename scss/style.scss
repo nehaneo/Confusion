@@ -38,6 +38,12 @@ ul { list-style-type: none; }
   height: 100%;
 }
 
+#carouselButtons {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
 .row-common {
   min-height: 400px;
   margin: 0 auto;
@@ -45,15 +51,19 @@ ul { list-style-type: none; }
   border-bottom: 1px solid #eaeaea;
 }
 
+.btn-envelope {
+     color: #fff;
+      background-color: #f00;
+      border-color: rgba(0, 0, 0, 0.2);
+}
+
 .footer-section {
   margin: 0 auto;
   padding: 20px 0;
   background-color: #AfAfAf;
 }
+
 .footer-section address {
   font-size: 0.95em;
 }
 
-// .contact-section {
-//   font-size: 100%
-// }
