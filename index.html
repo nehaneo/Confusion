@@ -26,11 +26,24 @@
         </div>
         <nav class="navbar-collapse collapse" id="bs-navbar" aria-expanded="false" style="height: 0.909091px;">
           <ul class="nav navbar-nav">
-            <li> <a href="../"><span class="glyphicon glyphicon-home"></span> Home</a> </li>
+            <li> <a href="../" class="active"><span class="glyphicon glyphicon-home"></span> Home</a> </li>
             <li>
               <a href="about.html"> <span class="glyphicon glyphicon-info-sign"></span> About</a>
             </li>
-            <li> <a href="../"><span class="glyphicon glyphicon-chevron-down"></span> Menu</a> </li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span>
+                         Menu <span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Appetizers</a></li>
+                <li><a href="#">Main Courses</a></li>
+                <li><a href="#">Desserts</a></li>
+                <li><a href="#">Drinks</a></li>
+                <li role="separator" class="divider"></li>
+                <li class="dropdown-header">Specials</li>
+                <li><a href="#">Lunch Buffet</a></li>
+                <li><a href="#">Weekend Brunch</a></li>
+              </ul>
+            </li>
             <li> <a href="contact.html"><span class="glyphicon glyphicon-phone-alt"></span> Contact</a> </li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
@@ -50,7 +63,7 @@
           <img src="img/logo.png" alt="Ristorant Confusion">
         </div>
         <div class="col-sm-2 section-margin padding-top">
-            <button type="button" class="btn btn-warning btn-block"  data-toggle="modal" data-target="#reserveTable">Reserve Table</button>
+            <button type="button" class="btn btn-warning"  data-toggle="modal" data-target="#reserveTable">Reserve Table</button>
         </div>
       </div>
     </div>
@@ -115,7 +128,21 @@
   </div>
 
   <div class="body-content section-margin">
-    <div class="row row-common">
+    <div class="row">
+      <div class="col-sm-12">
+        <nav aria-label="Search results pages">
+            <ul class="pagination">
+              <li class=""><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+              <li class="active"><a href="#uthappiza">1 <span class="sr-only">(current)</span></a></li>
+              <li class=""><a href="#buffet">2 <span class="sr-only">(current)</span></a></li>
+              <li class=""><a href="#alberto">3 <span class="sr-only">(current)</span></a></li>
+              <li><a href="#" aria-label="Next"> <span aria-hidden="true">&raquo;</span> </a> </li>
+            </ul>
+        </nav>
+      </div>
+    </div>
+
+    <div class="row row-common" id="uthappiza">
         <div class="col-sm-9">
           <div class="media">
             <div class="media-left">
@@ -135,7 +162,7 @@
           <h3>Our Lipsmacking Culinary Creations</h3>
         </div>
     </div>
-    <div class="row row-common">
+    <div class="row row-common" id="buffet">
       <div class="col-sm-3">
         <h3>This Month's Promotions</h3>
       </div>
@@ -155,7 +182,7 @@
       </div><!-- /media -->
       </div><!-- /col-sm-9 -->
     </div>
-    <div class="row row-common">
+    <div class="row row-common" id="alberto">
       <div class="col-sm-9">
         <div class="media">
           <div class="media-left">

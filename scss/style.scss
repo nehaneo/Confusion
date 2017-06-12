@@ -9,7 +9,7 @@ ul { list-style-type: none; }
 }
 
 .section-margin{
-  margin: 40px auto 20px auto;
+  margin: 60px auto 0 auto;
 }
 
 .padding-top {
@@ -47,14 +47,19 @@ ul { list-style-type: none; }
 .row-common {
   min-height: 400px;
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 70px 0 30px;
   border-bottom: 1px solid #eaeaea;
 }
 
 .btn-envelope {
-     color: #fff;
-      background-color: #f00;
-      border-color: rgba(0, 0, 0, 0.2);
+  color: #fff !important;
+  background-color: rgba(255,0,0,1);
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+.btn-envelope:hover,
+.btn-envelope:focus {
+   background-color: rgba(255, 0, 0, 0.6);
 }
 
 .footer-section {
@@ -64,6 +69,6 @@ ul { list-style-type: none; }
 }
 
 .footer-section address {
-  font-size: 0.95em;
+  font-size: 0.8034em;
 }
 
